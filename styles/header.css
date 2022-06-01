@@ -1,0 +1,231 @@
+#main-header .container {
+    max-width:122rem;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main-header .top-bar {
+    background: var(--primary-variant);
+    padding: 2rem 0;
+}
+
+#main-header .top-bar .logo h2 {
+    font-size: 2.2rem;
+    color: var(--secondary-variant);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#main-header .top-bar .logo h2 .esports {
+    font-size: 1.8rem;
+    padding: .4rem 1rem;
+    border-radius: 4px;
+    background: var(--primary);
+    color: var(--light);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#main-header .top-bar .right {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+#main-header .top-bar .socials {
+    display: flex;
+    gap: 2rem;
+}
+
+#main-header .top-bar .socials a {
+    display: inline-block;
+    font-size: 3.2rem;
+    color: var(--secondary-variant);
+    transition: .3s;
+}
+
+#main-header .top-bar .socials a:hover {
+    transform: translateY(-4px);
+    color: var(--primary);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+#main-header .top-bar .switch {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 2.4rem;
+}
+  
+
+#main-header .top-bar .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+#main-header .top-bar  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+#main-header .top-bar  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.8rem;
+    width: 1.8rem;
+    left: .4rem;
+    bottom: .4rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+#main-header .top-bar  input:checked + .slider {
+    background-color: var(--primary);
+}
+  
+#main-header .top-bar  input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary);
+}
+  
+#main-header .top-bar  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+#main-header .top-bar .slider.round {
+    border-radius: 34px;
+}
+  
+#main-header .top-bar .slider.round:before {
+border-radius: 50%;
+}
+
+#main-header .header-nav {
+    background: var(--primary);
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+#main-header .header-nav .nav-menu {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+#main-header .header-nav .nav-menu a {
+    display:inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--light);
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    transition: .3s;
+}
+
+#main-header .header-nav .nav-menu a[aria-current="page"] {
+    color: var(--dark);
+    text-shadow: 0px 0px 0px transparent;
+}
+
+#main-header .header-nav .nav-menu a:hover {
+    color: var(--dark);
+    text-shadow: 0px 0px 0px transparent;
+    transform: translateY(-4px);
+}
+
+#main-header .header-nav .bars {
+    display: none;
+    z-index: 102;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#main-header .header-nav  .bars.active {
+    position:absolute;
+    top: 5rem;
+    right: 2rem;
+    margin:0;
+}
+
+#main-header .header-nav .bars span {
+    display: block;
+    width: 3rem;
+    height: .4rem;
+    font-size: 2rem;
+    background-color: var(--light);
+    transition: all .3s ease-in;
+    margin: .5rem 0;
+}
+
+#main-header .header-nav .bars.active span:nth-child(1) {
+    transform: translateY(-4px) rotate(45deg);
+}
+
+#main-header .header-nav .bars.active span:nth-child(2) {
+    transform: translateY(-12px) rotate(-45deg);
+}
+
+#main-header .header-nav .bars.active span:nth-child(3) {
+    opacity: 0;
+}
+
+.title {
+    font-size: 34px;
+    color: #fff;
+    text-align: center;
+}
+
+.text {
+    font-size: 22px;
+    color: #fff;
+}
+
+
+/* Responsive */
+@media screen and (max-width:767px) {
+    #main-header .header-nav {
+        display: flex;
+        justify-content:center;
+    }
+
+    #main-header .header-nav .nav-menu {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        max-width: 30rem;
+        height:100%;
+        flex-direction: column;
+        background: var(--primary);
+        transform: translateX(4000px);
+        transition: .3s ease;
+    }
+
+    #main-header .header-nav .nav-menu.active {
+        transform: translateX(0);
+    }
+    
+    #main-header .header-nav .bars {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:540px) {
+    #main-header .top-bar .socials {
+        display: none;
+    }
+}

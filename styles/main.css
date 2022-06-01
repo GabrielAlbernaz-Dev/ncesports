@@ -1,0 +1,242 @@
+main .container {
+    max-width:120rem;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+}
+
+main .my-8 {
+    margin: 8rem 0;
+}
+
+main .grid-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 6rem;
+    padding: 2rem 0;
+}
+
+main .main-content {
+    width: 100%;
+    padding: 4rem;
+    background: var(--primary-variant);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    overflow: hidden;
+}
+
+main .main-title {
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--secondary-variant);
+    margin: 4rem 0;
+    text-align: center;
+}
+
+main .main-content .blog-grid {
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+main .main-content .blog-grid .blog-card:nth-child(1) {
+    grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+main .main-content .blog-card {
+    min-width: 26rem;
+    min-height: 20rem;
+    position: relative;
+    padding: 3rem;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    overflow:hidden;
+}
+
+main .main-content .blog-card:hover img {
+    transform: scale(1.4);
+}
+
+main .main-content .blog-card:hover .content h2 {
+    transform: translateY(-20px)
+}
+
+main .main-content .blog-card .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main .main-content .blog-card .img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(60%);
+    transition: .4s ease-in;
+}
+
+main .main-content .blog-card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+main .main-content .blog-card .content h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--light);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    transition: .1s;
+}
+
+main .category-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+main .category-posts .category-posts-card {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 1rem;
+    background: var(--primary-variant);
+    border-radius: 8px;
+    height: 25rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    overflow: hidden;
+}
+
+main .category-posts .category-posts-card .img {
+    overflow: hidden;
+}
+
+main .category-posts .category-posts-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 25rem;
+    object-fit: cover;
+    transition: .3s ease-in;
+}
+main .category-posts .category-posts-card .img:hover img {
+    transform: scale(1.4);
+}
+
+
+main .category-posts .category-posts-card .content {
+    padding: 1rem 2rem;
+    max-height: 25rem;
+}
+
+main .category-posts .category-posts-card .content h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--secondary-variant);
+    transition: .3s;
+}
+
+main .category-posts .category-posts-card .content:hover h2 {
+    color: var(--primary);
+    transform: translateY(-4px);
+}
+
+main .category-posts .category-posts-card .content p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--secondary-variant);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main .category-posts .category-posts-card .content span {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main .sidebar-tournaments {
+    background: var(--primary-variant);
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    border-radius: 8px;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main .sidebar-tournaments .btn {
+    margin: 2rem 0rem;
+}
+
+main .sidebar-tournaments .tournaments {
+    display: flex;
+    gap:4rem;
+    flex-direction: column;
+}
+
+main .sidebar-tournaments h2.title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--secondary-variant);
+    text-align: center;
+    margin: 1.5rem 0 4rem 0;
+}
+
+main .sidebar-tournaments .tournaments .tournament {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+}
+
+main .sidebar-tournaments .tournaments .tournament img {
+    display: block;
+    max-width: 7rem;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .sidebar-tournaments .tournaments .tournament h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--tertiary-variant);
+}
+
+/* Responsive */
+@media screen and (max-width:767px) {
+    main .main-content .blog-grid {
+        grid-template-columns: 1fr;
+    } 
+
+    main .main-content .blog-card {
+        min-width: 2rem;
+    }
+    
+    main .grid-2  {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:425px) {
+    html {
+        font-size: 56%;
+    }
+
+    main .category-posts .category-posts-card {
+        grid-template-columns: 1fr;
+    }
+}
+

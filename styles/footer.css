@@ -1,0 +1,90 @@
+#footer {
+    padding-top: 4rem;
+    background: var(--primary-variant);
+}
+
+#footer section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+#footer .container {
+    max-width: 122rem;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+    padding-bottom:4rem;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+#footer .container .brand .logo h2 {
+    font-size: 2.2rem;
+    color: var(--secondary-variant);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#footer .container .brand .logo h2 .esports {
+    font-size: 1.8rem;
+    padding: .4rem 1rem;
+    border-radius: 4px;
+    background: var(--primary);
+    color: var(--light);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#footer .container .brand p {
+    font-size: 1.4rem;
+    padding-right: 4rem;
+    color: var(--secondary-variant);
+}
+
+#footer .footer-menu .menu-title {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--secondary-variant);
+}
+
+#footer .footer-menu .footer-nav .nav-menu li {
+    margin-bottom: 1rem;
+}
+
+#footer .footer-menu .footer-nav .nav-menu a {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--secondary-variant);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: .2s;
+}
+
+#footer .footer-menu .footer-nav .nav-menu a:hover {
+    color: var(--primary);
+}
+
+#footer .copy {
+    width: 100%;
+    background: var(--primary);
+    text-align: center;
+    padding: 1rem;
+}
+
+#footer .copy h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--light);
+}
+
+#footer .copy h2 span {
+    margin-left: 1rem;
+}
+
+
+/* Responsive */
+@media screen and (max-width:600px) {
+    #footer .container {
+        grid-template-columns: 1fr;
+    }
+}
+

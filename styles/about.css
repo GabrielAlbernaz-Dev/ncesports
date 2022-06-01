@@ -1,0 +1,66 @@
+#about {
+    min-height: 70vh;
+}
+
+#about .wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    backdrop-filter:brightness(50%) blur(5px);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#about .about-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 4rem;
+    color: var(--light);
+    text-align: center;
+}
+
+#about .about-title .logo h2 {
+    font-size: 4rem;
+    color: var(--light);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#about .about-title .logo h2 .esports {
+    font-size: 3.8rem;
+    padding: .4rem 1rem;
+    border-radius: 4px;
+    background: var(--primary);
+    color: var(--light);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#about .about-description {
+    font-size: 2rem;
+    color: var(--light);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 60rem;
+}
+
+@media screen and (max-width: 767px) {
+    #about .about-title {
+        font-size: 3rem;
+        flex-direction:column;
+    }
+    #about .about-title .logo h2 {
+        font-size: 3rem;
+    }
+    #about .about-title .logo h2 .esports {
+        font-size: 2.8rem;
+    }
+    #about .about-description {
+        font-size: 1.6rem;
+    }
+}

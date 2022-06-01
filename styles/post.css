@@ -1,0 +1,38 @@
+#post-content {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap: 2rem;
+    padding: 8rem 0;
+    min-height: 55vh;
+}
+
+#post-content .container {
+    max-width:120rem;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+}
+
+
+#post-content .post-title {
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: var(--secondary-variant);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 1rem 0;
+}
+
+#post-content .post-date {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1rem 0;
+}
+
+#post-content .post-description {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--tertiary-variant);
+    margin: 2rem 0;
+    width: 100%;
+}
