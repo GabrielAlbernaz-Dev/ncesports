@@ -1,6 +1,5 @@
 <?php 
     //Template Name: Sobre
-    // Penis
 ?>
 <?php get_header(); ?>
 <style>
